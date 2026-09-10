@@ -32,7 +32,7 @@ def get_movie_session_by_id(movie_session_id: int) -> MovieSession:
 
 def update_movie_session(
         session_id: int,
-        show_time: str | None = None,
+        show_time: datetime | None = None,
         movie_id: int | None = None,
         cinema_hall_id: int | None = None,
 ) -> None:
