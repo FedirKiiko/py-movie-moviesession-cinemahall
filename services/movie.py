@@ -9,8 +9,6 @@ def get_movies(
 ) -> QuerySet | Movie:
     queryset = Movie.objects.all()
 
-    if not genres_ids and not actors_ids:
-        return queryset
     if genres_ids:
         queryset = queryset.filter(genres__id__in=genres_ids)
     if actors_ids:
